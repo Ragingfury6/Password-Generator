@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/98a50fb53a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>Password Generator</title>
+  </head>
+  <body class="bg-[#342E37]">
+    <h1 class="text-4xl text-center p-16 text-[#FAFFFD]">Password Generator</h1>
+    <form class="FORM w-full flex justify-center items-center flex-col gap-8">
+      <div class="flex gap-8 flex-col sm:flex-row">
+        <div class="relative group text-[#FAFFFD]">
+            <input
+              type="text"
+              placeholder=""
+              id="Name"
+              name="Name"
+              class="p-4 text-xl border-0 outline-0 bg-transparent border-b-2 peer"
+            />
+          <label
+            for="Name Input"
+            class="absolute left-2 -translate-y-2 text-sm translate-x-[.5rem] pointer-events-none transition input__label peer-placeholder-shown:translate-y-[75%] peer-placeholder-shown:text-base transition"
+            >Service Name</label
+          >
+        </div>
+        <div class="relative group text-[#FAFFFD]">
+            <input
+              type="url"
+              placeholder=""
+              id="URL"
+              name="URL"
+              class="p-4 text-xl border-0 outline-0 bg-transparent border-b-2 peer"
+            />
+          <label
+            for="URL Input"
+            class="absolute left-2 -translate-y-2 text-sm translate-x-[.5rem] pointer-events-none transition input__label peer-placeholder-shown:translate-y-[75%] peer-placeholder-shown:text-base transition"
+            >Service URL</label
+          >
+        </div>
+      </div>
+      <div class="flex gap-8 flex-col sm:flex-row">
+        <div class="text-[#FAFFFD]">
+          <label for="Symbols">Include Symbols</label>
+          <input checked type="checkbox" name="Symbols" id="Symbols" />
+        </div>
+        <div class="text-[#FAFFFD]">
+          <label for="Uppercase">Include Uppercase</label>
+          <input checked type="checkbox" name="Uppercase" id="Uppercase" />
+        </div>
+        <div class="text-[#FAFFFD]">
+          <label for="Numbers">Include Numbers</label>
+          <input checked type="checkbox" name="Numbers" id="Numbers" />
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="bg-[#3C91E6] p-4 rounded text-[#FAFFFD] font-bold w-1/4 hover:bg-[#1a73cb] transition max-w-md"
+      >
+        Generate
+      </button>
+    </form>
+    <div class="">
+      <h2 class="text-4xl text-center pt-16 pb-4 text-[#FAFFFD]">All Passwords</h2>
+      <div class="h-px w-3/4 bg-[#FAFFFD] mx-auto"></div>
+      <div class="grid mt-8 py-4 w-3/4 mx-auto CARDS grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4 justify-items-center sm:justify-items-start">
+      </div>
+    </div>
+<script src="./index.js"></script>
+  </body>
+</html>
