@@ -34,12 +34,13 @@ const generatePassword = ({
 const createNewCard = (url, name, password) => {
   const newCard = document.createElement("div");
   newCard.innerHTML = `<div
-          class="bg-[#FAFFFD] rounded text-[#342E37] hover:bg-[#e8edeb] transition relative"
+          class="bg-[#FAFFFD] rounded text-[#342E37] transition relative p-4"
         >
-          <a href="${url}" target="_blank" class="block p-4">
             <h4 class="text-3xl mb-4">${name}</h4>
             <p class="text-xl">${password}</p>
-          </a>
+            <a href="${url}" target="_blank" class="block mt-4 underline hover:text-[#3C91E6] transition">
+            Visit
+            </a>
           <div class="absolute top-[.5rem] right-[.5rem] text-slate-400 hover:text-red-400 transition cursor-pointer CARD_DELETE">
           <i class="fa-regular fa-trash-can"></i>
           </div>
